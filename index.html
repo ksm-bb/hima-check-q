@@ -5,9 +5,9 @@
   <base target="_top">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 
-  <link rel="apple-touch-icon" href="https://i.ibb.co/1Cf8JTS/S-4620317.jpg">
-  <link rel="icon" sizes="192x192" href="https://i.ibb.co/1Cf8JTS/S-4620317.jpg">
-  <link rel="shortcut icon" href="https://i.ibb.co/1Cf8JTS/S-4620317.jpg">
+  <link rel="apple-touch-icon" href="https://i.ibb.co/MkMDnwjw/icon-01.png">
+  <link rel="icon" sizes="192x192" href="https://i.ibb.co/MkMDnwjw/icon-01.png">
+  <link rel="shortcut icon" href="https://i.ibb.co/MkMDnwjw/icon-01.png">
 
   <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 
@@ -126,7 +126,7 @@
             <div className="flex items-center gap-1">
              <h1 className="text-2xl font-black italic tracking-tighter flex">
   {/* ✏️ [แก้ได้] เปลี่ยนชื่อแอปที่นี่ */}
-  {"Nori Design".split('').map((char, index) => (
+  {"HIMAWARI".split('').map((char, index) => (
     <span 
       key={index} 
       className={`bg-gradient-to-br from-[#8E44AD] to-[#FF4D94] bg-clip-text text-transparent drop-shadow-sm inline-block animate-text-wave pb-2 ${char === ' ' ? 'w-2.5' : 'pr-[1.5px]'}`} 
@@ -275,10 +275,10 @@
         >
         {task.status === 'doing' && (
            <div className="absolute inset-0 pointer-events-none z-0">
-             <div className="absolute -bottom-2 -left-3 text-[14px] animate-float-particle-1 drop-shadow-sm">🌸</div>
-             <div className="absolute top-[30%] -left-4 text-[10px] animate-float-particle-3 drop-shadow-sm" style={{ animationDelay: '1.5s' }}>✨</div>
-             <div className="absolute -bottom-2 -right-3 text-[14px] animate-float-particle-2 drop-shadow-sm" style={{ animationDelay: '0.5s' }}>🌸</div>
-             <div className="absolute top-[30%] -right-4 text-[10px] animate-float-particle-1 drop-shadow-sm" style={{ animationDelay: '1.2s' }}>✨</div>
+             <div className="absolute -bottom-2 -left-3 text-[14px] animate-float-particle-1 drop-shadow-sm">🌷</div>
+             <div className="absolute top-[30%] -left-4 text-[10px] animate-float-particle-3 drop-shadow-sm" style={{ animationDelay: '1.5s' }}>☁️</div>
+             <div className="absolute -bottom-2 -right-3 text-[14px] animate-float-particle-2 drop-shadow-sm" style={{ animationDelay: '0.5s' }}>🌷</div>
+             <div className="absolute top-[30%] -right-4 text-[10px] animate-float-particle-1 drop-shadow-sm" style={{ animationDelay: '1.2s' }}>☁️</div>
            </div>
         )}
         {/* สีแถบข้างการ์ดปรับให้สดใสป๊อปๆ */}
@@ -435,7 +435,7 @@
       // ==========================================
       // 🌐 API: ลิงก์ Google Apps Script Web App
       // ==========================================
-      const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbx-2OX7kdX_I1nOQnR0ufdt9Z_rfcqXBhTIUoBMhLq8QqWhKT55Z7gfVhgs0V-TB79q/exec";
+      const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxobrSBicU_8707ooSsntRFKsUw0RFE44brJyTECK3u8MZ7Mqlp-Uz4PMUQpOG9zJ_9ug/exec";
 
       const fetchAPI = async (payload) => {
         try {
@@ -452,7 +452,7 @@
       };
 
       useEffect(() => {
-        document.title = "Nori Design"; 
+        document.title = "HIMAWARI"; 
         
         fetch(WEB_APP_URL + "?action=getInitialData")
           .then(res => res.json())
@@ -942,3 +942,4 @@
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
+
