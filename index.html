@@ -129,7 +129,7 @@
   {"HIMAWARI".split('').map((char, index) => (
     <span 
       key={index} 
-      className={`bg-gradient-to-br from-[#ca9fdd] to-[#f1e8ad] bg-clip-text text-transparent drop-shadow-sm inline-block animate-text-wave pb-2 ${char === ' ' ? 'w-2.5' : 'pr-[1.5px]'}`} 
+      className={`bg-gradient-to-br from-[#ca9fdd] to-[#f2a9cf] bg-clip-text text-transparent drop-shadow-sm inline-block animate-text-wave pb-2 ${char === ' ' ? 'w-2.5' : 'pr-[1.5px]'}`} 
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       {char}
@@ -942,6 +942,7 @@
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
+
 
 
 
