@@ -323,7 +323,7 @@
           
           <div className="flex-1 min-w-0 mr-1 flex flex-col">
             
-            {/* ✨ รวมประเภทงานและรายละเอียดเข้าด้วยกัน ลดขนาดข้อความให้เล็กลง ✨ */}
+            {/* ✨ รวมประเภทงานและรายละเอียดเข้าด้วยกัน ปรับขนาดข้อความให้เล็กลง ✨ */}
             <div className={`truncate mt-0 ${isDone ? 'line-through text-gray-400' : 'text-gray-600'}`}>
               <span className="text-[11px] font-extrabold" style={{ color: isDone ? '#9ca3af' : COLORS.textMain }}>{task.type}</span>
               {task.details && (
@@ -363,7 +363,7 @@
 
                 {isAdmin ? (
                   <div className="flex gap-1.5 shrink-0">
-                    {/* ปรับขนาดปุ่มเลื่อนสถานะให้เล็กลง (w-6 h-6 และลดขนาดไอคอน) */}
+                    {/* ปรับขนาดปุ่มเลื่อนสถานะให้เล็กลง (w-[26px] h-[26px] และลดขนาดไอคอนเป็น 14) */}
                     <button onClick={(e) => onPrevStatus(e, task.id)} disabled={statusIdx === 0} className={`w-[26px] h-[26px] rounded-[8px] border-[1.5px] flex items-center justify-center transition-all bg-white ${statusIdx === 0 ? 'opacity-40 cursor-not-allowed border-[#F7D1DF] text-gray-400' : 'active:scale-90 border-[#F29CBA] text-[#D85C8A] hover:bg-[#FDF2F6]'}`}>
                       <IconChevronsLeft size={14} />
                     </button>
@@ -1110,15 +1110,30 @@
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-3px); }
         }
-        .animate-cloud-float {
-          animation: cloud-float 3s ease-in-out infinite;
-        }
-
+        
         /* แอนิเมชันสำหรับฟองอากาศในน้ำ (ลูปแบบสมูท 100% ด้วยคณิตศาสตร์ LCM) */
         @keyframes bubbles-flow {
           0% { background-position: 0px 10%, 0px 50%, 0px 90%; }
           100% { background-position: -48px 10%, -24px 50%, -16px 90%; }
         }
+
+        /* ---------------------------------
+           คลาสสำหรับการเรียกใช้งานแอนิเมชัน
+           --------------------------------- */
+        .animate-text-wave { animation: text-wave 4s ease-in-out infinite; }
+        .animate-breathe { animation: breathe 4s ease-in-out infinite; transform-origin: center; }
+        .animate-float-particle-1 { animation: float-particle-1 3s ease-out infinite; }
+        .animate-float-particle-2 { animation: float-particle-2 4s ease-out infinite 1s; }
+        .animate-float-particle-3 { animation: float-particle-3 3.5s ease-out infinite 0.5s; }
+        .animate-float { animation: float 15s ease-in-out infinite; }
+        .animate-float-reverse { animation: float-reverse 18s ease-in-out infinite; }
+        .animate-bounce-slow { animation: bounce-slow 4s ease-in-out infinite; }
+        .animate-slideUp { animation: slideUp 0.3s ease-out; }
+        .animate-fadeIn { animation: fadeIn 0.4s ease-out; }
+        .animate-cloud-float { animation: cloud-float 3s ease-in-out infinite; }
+        /* ⬇️ คลาสไอคอนหมุนกลับมาแล้ว ⬇️ */
+        .animate-spin-slow { animation: spin-slow 1.5s linear infinite; } 
+
         .bg-bubbles {
           background-image: 
             radial-gradient(circle, rgba(255,255,255,0.9) 2px, transparent 2.5px),
@@ -1141,4 +1156,3 @@ root.render(<App />);
   </script>
 </body>
 </html>
-
