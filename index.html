@@ -931,7 +931,7 @@
                  <div className="flex flex-col gap-1.5 mt-2">
                     <label className="text-[10px] font-bold text-[#E57399] ml-1">สถานะคิวงาน</label>
                     <select name="status" defaultValue={editingTask?.status || 'รอคิว'} className="w-full p-3.5 rounded-2xl font-black text-[11px] outline-none border border-[#F7D1DF] shadow-sm focus:border-[#D85C8A] transition-all cursor-pointer" style={{ backgroundColor: COLORS.cardInner, color: COLORS.pinkDeep }}>
-                      {TASK_STATUSES.map(s => <option key={s.label} value={s.label}>{s.label} ({s.percent}%)</option>)}
+                      {TASK_STATUSES.map(s => <option key={s.label} value={s.label}>{s.label}</option>)}
                     </select>
                  </div>
                  
@@ -1156,3 +1156,4 @@ root.render(<App />);
   </script>
 </body>
 </html>
+
