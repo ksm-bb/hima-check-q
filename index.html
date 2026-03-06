@@ -83,11 +83,11 @@
     // 📌 ข้อมูลสถานะคิวงานทั้งหมด (STATUSES)
     // ==========================================
     const TASK_STATUSES = [
-      { label: 'รอคิว'},
-      { label: 'กำลังทำ'},
-      { label: 'รอเช็คงาน'},
-      { label: 'แก้ไขงาน'},
-      { label: 'ส่งงานแล้ว'}
+      { label: 'รอคิว', percent: 0 },
+      { label: 'กำลังทำ', percent: 25 },
+      { label: 'รอเช็คงาน', percent: 50 },
+      { label: 'แก้ไขงาน', percent: 75 },
+      { label: 'ส่งงานแล้ว', percent: 100 }
     ];
 
     const getStatusIndex = (statusStr) => {
@@ -1156,4 +1156,3 @@ root.render(<App />);
   </script>
 </body>
 </html>
-
